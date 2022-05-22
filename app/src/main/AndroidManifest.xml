@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".app.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Activity8"
         android:usesCleartextTraffic="true">
-        <activity android:name=".TambahTeman" ></activity>>
+        <activity
+            android:name=".EditTeman"
+            android:exported="false" />
+        <activity android:name=".TambahTeman" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

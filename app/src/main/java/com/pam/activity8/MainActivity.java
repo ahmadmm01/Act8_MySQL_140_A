@@ -67,6 +67,7 @@ public class MainActivity extends AppCompatActivity
 
     public void BacaData()
     {
+        temanArrayList.clear();
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
         JsonArrayRequest jArr = new JsonArrayRequest(url_select, new Response.Listener<JSONArray>()
         {
@@ -93,6 +94,7 @@ public class MainActivity extends AppCompatActivity
                         e.printStackTrace();
                     }
                 }
+                adapter.notifyDataSetChanged();
             }
         }
         ,new Response.ErrorListener()
